@@ -1,13 +1,138 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 25px;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  /* height: calc(100vh -2px);   */
+  height:100vh;
+  max-width:500px;
+  border: 1px solid #ba242d;
+  margin:auto;
+}
+
+header {
+  width: calc(100%-2px);
+  background-color: #ba242d;
+  color: #fff;
+  font-weight: bold;
+  padding: 0 0.25em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+
+.tut2{
+  margin-top: 0px ;
+  width:fit-content;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+main{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y:auto;
+}
+
+.btn {
+  width:fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+}
+
+
+
+.random{
+  color:#fff;
+  background-color: darkcyan;
+  border-radius: 5px;
+}
+
+.event{
+  background-color:darkgoldenrod;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.double{
+  text-decoration-line: underline;
+  color: darkgreen
+}
+
+footer{
+  background-color: #ba242d;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  display: grid;
+  place-content: center;
+  width: 100%;
+  padding: 0.25em;
+}
+
+ul{
+  width: 100%;
+  list-style: none;
+  padding: 0.25rem 0.25rem;
+
+}
+
+ul li::before{
+  content: "\200B";
+}
+
+.item{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.25rem 0.25rem 0.25rem;
+  margin: 0.25rem 0;
+  background-color: #eee;
+}
+
+.item:first-child{
+  margin: 0;
+}
+
+.item input[type="checkbox"]:focus + label {
+  text-decoration: underline;
+  color:#ba242d;
+}
+
+
+.item > label {
+  font-size: 0.75rem;
+  flex-grow: 1;
+}
+
+.item svg {
+  width: 48px;
+  min-width: 48px;
+  height: 36px;
+  font-size: 1rem;
+  color: steelblue;
+  cursor: pointer;
+}
+
+.item svg:focus,
+.item svg:hover{
+  color: red;
+  outline: none;
 }
